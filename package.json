@@ -1,0 +1,22 @@
+{
+  "name": "social-proof-section-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "postcss:watch": "postcss styles/global.css --dir public --watch",
+    "build": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "cssnano": "^5.1.4",
+    "fs-extra": "^10.0.1",
+    "postcss": "^8.4.12",
+    "postcss-custom-media": "^8.0.0",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6"
+  }
+}

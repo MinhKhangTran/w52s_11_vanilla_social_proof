@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700&display=swap");
+
+/* ----------------------------- */
+/* Custom Properties             */
+/* ----------------------------- */
+:root {
+  /* font-family */
+  --ff: "Spartan", sans-serif;
+
+  /* colors */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(303, 10%, 53%);
+  --white: hsl(0, 0%, 100%);
+
+  /* font-sizes */
+  --h1: 2rem;
+  --subtitle: 0.9375rem;
+  --body: 0.875rem;
+}
+
+@media (min-width: 420px) {
+  :root {
+    /* font-sizes */
+    --h1: 3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  background-color: var(--white);
+  font-family: var(--ff);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+/* ----------------------------- */
+/* Reset                         */
+/* ----------------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset Margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Images */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Forms */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+/* Animation */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.skip-to-content {
+  background: var(--grayish-blue);
+  color: var(--very-dark-grayish-blue);
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-120%);
+  transition: transform 500ms ease-in;
+  position: absolute;
+  z-index: 1000;
+}
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
+/* typography */
+
+.uppercase {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+.h1 {
+  font-size: var(--h1);
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.032em;
+}
+@media (min-width: 420px) {
+  .h1 {
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.032em;
+  }
+}
+.subtitle {
+  font-size: var(--subtitle);
+  font-weight: 400;
+  line-height: 164%;
+  letter-spacing: -0.03em;
+}
+.h2 {
+  font-size: var(--body);
+  font-weight: 600;
+  line-height: 164%;
+  letter-spacing: -0.03em;
+}
+.subtitle2 {
+  font-size: var(--body);
+  font-weight: 400;
+  line-height: 164%;
+  letter-spacing: -0.03em;
+}
+.body {
+  font-size: var(--body);
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: -0.055em;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 1110px;
+  width: 86.67%;
+}
+/* colors */
+.bg-very-dark-magenta {
+  background-color: var(--very-dark-magenta);
+}
+.bg-light-grayish-magenta {
+  background-color: var(--light-grayish-magenta);
+}
+
+.text-very-dark-magenta {
+  color: var(--very-dark-magenta);
+}
+.text-dark-grayish-magenta {
+  color: var(--dark-grayish-magenta);
+}
+.text-soft-pink {
+  color: var(--soft-pink);
+}
+
+body {
+  background: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+}
