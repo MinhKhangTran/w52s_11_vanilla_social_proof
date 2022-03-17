@@ -11,7 +11,7 @@
   --very-dark-magenta: hsl(300, 43%, 22%);
   --soft-pink: hsl(333, 80%, 67%);
   --dark-grayish-magenta: hsl(303, 10%, 53%);
-  --light-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
   --white: hsl(0, 0%, 100%);
 
   /* font-sizes */
@@ -20,7 +20,7 @@
   --body: 0.875rem;
 }
 
-@media (min-width: 420px) {
+@media (min-width: 768px) {
   :root {
     /* font-sizes */
     --h1: 3rem;
@@ -37,6 +37,18 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
+  background: url(../images/bg-pattern-top-mobile.svg),
+    url(../images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+}
+@media (min-width: 768px) {
+  body {
+    background: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+  }
 }
 
 /* ----------------------------- */
@@ -153,7 +165,7 @@ ul {
   line-height: 100%;
   letter-spacing: -0.032em;
 }
-@media (min-width: 420px) {
+@media (min-width: 768px) {
   .h1 {
     font-weight: 700;
     line-height: 100%;
@@ -207,10 +219,73 @@ ul {
 .text-soft-pink {
   color: var(--soft-pink);
 }
+article {
+  width: 100%;
+}
+.social__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+h1 {
+  text-align: center;
+}
+.subtitle {
+  text-align: center;
+  padding-top: 1.5rem;
+}
 
-body {
-  background: url(../images/bg-pattern-top-desktop.svg),
-    url(../images/bg-pattern-bottom-desktop.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: top left, bottom right;
+.review {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  padding-block: 1rem 0.625rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 445px;
+  flex-direction: column;
+}
+.review-stars {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.review-2 {
+  margin-block: 1rem;
+}
+
+/* Component */
+@media (min-width: 768px) {
+  article {
+    width: 100%;
+  }
+  .social__header {
+    flex-direction: row;
+    gap: 0;
+  }
+  .social__header--left,
+  .social__header--right {
+    width: 50%;
+  }
+  h1 {
+    width: 410px;
+    text-align: left;
+  }
+  .subtitle {
+    width: 430px;
+    padding-top: 0.8125rem;
+    text-align: left;
+  }
+  .review {
+    flex-direction: row;
+    gap: 2rem;
+    padding-block: 1rem;
+    padding-left: 2rem;
+  }
+  .review-2 {
+    margin-left: 3rem;
+  }
+  .review-3 {
+    margin-left: 6rem;
+  }
 }
